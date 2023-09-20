@@ -1,0 +1,271 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-image: url("bg.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Digital clock css */
+#digital-clock {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  flex-direction: column;
+  color: white;
+  text-shadow: 4px 2px 5px rgb(53, 53, 252);
+  width: 70%;
+  height: 80%;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+#digital-clock > h1 {
+  position: relative;
+  font-size: 40px;
+  margin-top: 20px;
+  /* text-shadow: 3px 3px 5px rgb(53, 53, 252); */
+}
+#digital-clock .alarm-section{
+  height: 40vh;
+  width: 67vw;
+  position: absolute;
+  font-size: 20px;
+  text-align:start;
+  top: 15%;
+  left: 16%;
+}
+#digital-clock .alarm-section>h1{
+position: relative;
+  left: 35px;
+}
+#digital-clock .alarm-section form input{
+  cursor: pointer;
+  width: 140px;
+  height: 40px;
+  border: 2px solid gray;
+  border-radius: 5px;
+  font-size: 18px;
+  padding: 0px 7px;
+  margin-top: 15px;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-left: 20px;
+}
+.alarm-section form button {
+  position: relative;
+  /* /* top:60px; */
+  left: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  width: 100px;
+  height: 30px;
+  border-radius: 7px;
+  box-shadow: 1px 1px 6px 3px white;
+  border: 2px solid #857c7c;
+  color: white;
+  font-size: 16px;
+  background-color: #0be6c1;
+  transition: 0.3s ease-in-out;
+}
+.alarm-section form button:hover {
+  box-shadow: 1px 1px 5px 3px#0be6c1;
+  color: #0be6c1;
+  background-color: white;
+}
+.alarm-section form button:active {
+  width: 90px;
+  height: 28px;
+}
+#digital-clock .date-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3%;
+  cursor: default;
+  height: 20%;
+  width: 50%;
+  /* border: 2px solid red; */
+}
+#digital-clock .date-section .dates {
+  font-size: 30px;
+  padding: 2px 15px;
+  border-radius: 10px;
+  margin: 5px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+#digital-clock .time-section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3%;
+  width: 60%;
+  height: 40%;
+  cursor: pointer;
+  /* border: 2px solid red; */
+}
+#digital-clock .time-section .hour,
+.min,
+.sec {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 35px;
+  align-items: center;
+  margin: 0px 10px;
+  border-radius: 10px;
+  height: 90%;
+  width: 30%;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+#digital-clock .time-section .hour > h2,
+.min > h2,
+.sec > h2 {
+  font-size: 30px;
+  margin-bottom: 25px;
+}
+.alarm-section details{
+  top: 20px;
+  font-size: 24px;
+  font-weight: 800;
+  position: absolute;
+  margin-left: 74%;
+  text-shadow: 1px 1px 1px rgb(255, 255, 255);
+ cursor: pointer;
+}
+.alarm-section  ul>li{
+  border-bottom: 1px solid gray;
+  margin: 9px 0px 0px 45px;
+  padding-left: 9px;
+  padding-bottom: 5px;
+  cursor: pointer;
+
+}
+/* Responsiveness start  */
+@media only screen and (min-width: 0px) and (max-width: 500px) {
+  #digital-clock {
+    width: 90%;
+    height: 60%;
+    margin: 0px;
+  }
+  #digital-clock > h1 {
+    position: relative;
+    font-size: 30px;
+    margin-top: 20px;
+    /* text-shadow: 3px 3px 5px rgb(53, 53, 252); */
+  }
+
+  #digital-clock .date-section .dates {
+    font-size: 15px;
+    padding: 2px 8px;
+    border-radius: 5px;
+    margin: 5px;
+  }
+  #digital-clock .time-section .hour,
+  .min,
+  .sec {
+    font-size: 20px;
+    margin: 0px 10px;
+    border-radius: 10px;
+    height: 90%;
+    width: 30%;
+  }
+  #digital-clock .time-section {
+    width: 100%;
+    height: 30%;
+    margin:0px;
+  }
+  #digital-clock .time-section .hour > h2,
+  .min > h2,
+  .sec > h2 {
+    font-size: 17px;
+    margin-bottom: 2px;
+  }
+  #digital-clock .alarm-section {
+    height: 26vh;
+    width: 92vw;
+    left: 0px;
+    font-size: 13px;
+    top: 58%;
+    margin: 10px;
+}
+#digital-clock .alarm-section>h1 {
+  position:initial;
+  text-align: center;
+}
+#digital-clock .alarm-section form input {
+
+  width: 121px;
+  height: 35px;
+  font-size: 15px;
+  margin-top: 15px;
+  margin-left: 30px;
+}
+.alarm-section form button {
+  left: 20px;
+}
+.alarm-section details {
+  top: 95px;
+  font-size: 16px;
+  margin-left: 66%;
+}
+.alarm-section ul>li {
+  margin: 9px 0px 0px 11px;
+  font-size: 14px;
+}
+}
+@media only screen and (min-width: 700px) and (max-width: 1025px) {
+
+  #digital-clock {
+    width: 90%;
+    height: 70%;
+    margin: 0px;
+  }
+  #digital-clock .time-section {
+    width: 100%;
+    height: 45%;
+    margin:0px;
+  }
+  #digital-clock .time-section .hour > h2,
+  .min > h2,
+  .sec > h2 {
+    font-size: 32px;
+    margin-bottom: 2px;
+  }
+  #digital-clock .time-section .hour, .min, .sec {
+    font-size: 44px;
+}
+  #digital-clock .alarm-section {
+
+    width: 98vw;
+    left: 0px;
+    height: 15vh;
+    font-size: 18px;
+    margin: 10px;
+}
+.alarm-section details {
+  margin-left: 68%; 
+}
+.alarm-section ul>li {
+  margin: 9px 0px 0px 100px;
+}
+#digital-clock .alarm-section form input {
+  margin-left: 60px;
+}
+#digital-clock .alarm-section>h1 {
+  width: 225px;
+  left: 100px;
+}
+}
